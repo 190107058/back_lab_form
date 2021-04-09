@@ -30,7 +30,7 @@ margin-top:2%;
 <div class="container">
 <div class="row">
 <div class="col-md-2"> <img src="/32114.svg" width="80" /></div>
-<div class="col-md-8"><h2>Laravel Multiple File Uploading With Bootstrap Form</h2>
+<div class="col-md-8"><h2>@lang('main.title')</h2>
 </div>
 </div>
 <br>
@@ -40,24 +40,24 @@ margin-top:2%;
 <form action="/multiuploads" method="post" enctype="multipart/form-data">
 {{ csrf_field() }}
 <div class="form-group">
-                    <label for="Person Name">Name</label>
-                    <input type="text" name="name" class="form-control"  placeholder="Name" >
+                    <label for="Person Name">@lang('main.name')</label>
+                    <input type="text" name="name" class="form-control"  placeholder="@lang('main.name')" >
                 </div>
 
                 <div class="form-group">
-                    <label for="Person Surname">Surname</label>
-                    <input type="text" name="surname" class="form-control"  placeholder="Surname" >
+                    <label for="Person Surname">@lang('main.surname')</label>
+                    <input type="text" name="surname" class="form-control"  placeholder="@lang('main.surname')" >
                 </div>
 
                 <div class="form-group">
-                    <label for="Person Email">Email</label>
-                    <input type="text" name="email" class="form-control"  placeholder="Email" >
+                    <label for="Person Email">@lang('main.email')</label>
+                    <input type="text" name="email" class="form-control"  placeholder="@lang('main.email')" >
                 </div>
-<label for="Product Name">Photos (can attach more than one):</label>
+<label for="Product Name">@lang('main.photo')</label>
 <br />
-<input type="file" class="form-control" name="photos[]" multiple />
-<br /><br />
-<input type="submit" class="btn btn-primary" value="Upload" />
+<input type="file" class="form-control" name="photos[]" multiple/>
+<br />
+<input type="submit" class="btn btn-primary" value="@lang('main.upload')" />
 </form>
 </div>
 </div>

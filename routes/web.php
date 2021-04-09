@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UploadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-use App\Http\Controllers\UploadController;
+
 Route::get('/multiuploads', [UploadController::class, 'uploadForm']);
 Route::post('/multiuploads', [UploadController::class, 'uploadSubmit']);
 
 Route::get('/send/mail', [UploadController::class, 'send']);
+
+Route::get('/multiuploads/{locale}', function ($lang){
+    App::setlocale($lang);
+    return view('Upload_form');
+});
